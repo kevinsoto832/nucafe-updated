@@ -9,15 +9,16 @@
  */
 
 ?>
+<!--
+  This component uses @tailwindcss/forms
 
-<footer id="colophon">
+  yarn add @tailwindcss/forms
+  npm install @tailwindcss/forms
 
-	<div>
-		<a href="<?php echo esc_url(__('https://wordpress.org/', 'nucafe')); ?>">
-			<?php
-			/* translators: %s: CMS name, i.e. WordPress. */
-			printf(esc_html__('Proudly powered by %s', 'nucafe'), 'WordPress');
-			?>
-		</a>
-	</div>
+  plugins: [require('@tailwindcss/forms')]
+-->
+
+<footer id="colophon" class="text-white bg-nu-black lg:grid lg:grid-cols-5">
+
+
 </footer><!-- #colophon -->

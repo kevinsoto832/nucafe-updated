@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying page content in page.php
  *
@@ -12,10 +13,10 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header>
 		<?php
-		if ( ! is_front_page() ) {
-			the_title( '<h1 class="entry-title">', '</h1>' );
+		if (!is_front_page()) {
+			the_title('<h1 class="entry-title">', '</h1>');
 		} else {
-			the_title( '<h2 class="entry-title">', '</h2>' );
+			the_title('<h2 class="entry-title">', '</h2>');
 		}
 		?>
 	</header>
@@ -28,28 +29,28 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div>' . esc_html__( 'Pages:', 'nucafe' ),
+				'before' => '<div>' . esc_html__('Pages:', 'nucafe'),
 				'after'  => '</div>',
 			)
 		);
 		?>
 	</div>
 
-	<?php if ( get_edit_post_link() ) : ?>
+	<?php if (get_edit_post_link()) : ?>
 		<footer>
 			<?php
 			edit_post_link(
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span>%s</span>', 'nucafe' ),
+						__('Edit <span>%s</span>', 'nucafe'),
 						array(
 							'span' => array(
 								'class' => array(),
 							),
 						)
 					),
-					wp_kses_post( get_the_title() )
+					wp_kses_post(get_the_title())
 				),
 				'<span>',
 				'</span>'

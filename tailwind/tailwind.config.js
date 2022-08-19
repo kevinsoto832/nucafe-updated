@@ -17,7 +17,13 @@ module.exports = {
 			fontFamily: {
 				one: "itc-avant-garde-gothic-pro",
 				two: "avenir",
-			}
+			},
+			colors: {
+				"nu-black": "#212121",
+				// "accent": "#212121",
+				// "midtone": "#212121",
+				// "shadow": "#212121"
+			  }
 		}
 	},
 	corePlugins: {
@@ -33,7 +39,7 @@ module.exports = {
 
 		// Uncomment below to add additional first-party Tailwind plugins.
 		// require( '@tailwindcss/aspect-ratio' ),
-		// require( '@tailwindcss/forms' ),
+		require( '@tailwindcss/forms' ),
 		// require( '@tailwindcss/line-clamp' ),
 	],
 };

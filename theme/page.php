@@ -16,18 +16,22 @@
 get_header();
 ?>
 
-<main id="primary">
-
+<main id="primary" class="max-w-full mx-auto">
+	<!--  prose prose-headings:text-white prose-headings:font-one prose-p:text-white prose-p:font-two -->
 	<?php
+	$theslug = get_the_slug();
+	$myPageTemplatePart = 'template-parts/content/content-' . $theslug;
+
 	while (have_posts()) :
 		the_post();
 
-		get_template_part('template-parts/content/content', 'page');
-
-		// If comments are open or we have at least one comment, load up the comment template.
-		if (comments_open() || get_comments_number()) :
-			comments_template();
-		endif;
+		if (is_front_page()) {
+			get_template_part('template-parts/content/content-home');
+		} elseif (is_page(array('about', 'locations', 'products', 'press', 'careers', 'contact'))) {
+			get_template_part($myPageTemplatePart);
+		} else {
+			get_template_part('template-parts/content/content', 'page');
+		}
 
 	endwhile; // End of the loop.
 	?>
@@ -35,5 +39,5 @@ get_header();
 </main><!-- #main -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

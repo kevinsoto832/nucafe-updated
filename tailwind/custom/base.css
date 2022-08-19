@@ -12,5 +12,21 @@
  * editor.
 */
 body {
-	@apply bg-background font-sans text-foreground;
+	@apply bg-background font-two text-foreground;
+}
+
+h1 {
+	@apply font-one text-4xl tracking-[3.42px];
+}
+
+h3 {
+	@apply font-two text-[1.625rem] font-extralight tracking-[.65];
+}
+
+h5 {
+	@apply font-one text-xl font-light tracking-[.3px];
+}
+
+p {
+	@apply font-two text-lg font-extralight leading-[2.19] tracking-[.65];
 }

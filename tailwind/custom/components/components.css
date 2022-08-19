@@ -20,9 +20,9 @@
  * The `$post-title-selector` variable is replaced by PostCSS. Please see the
  * `postcss.config.js` file for details.
  */
-$(post-title-selector) {
+/* $(post-title-selector) {
 	@apply mx-auto mb-6 max-w-content text-3xl font-extrabold text-neutral-900;
-}
+} */
 
 /**
  * Post content styles (via Tailwind Typography)
@@ -38,14 +38,14 @@ $(post-title-selector) {
  *
  * https://tailwindcss.com/docs/typography-plugin
  */
-$(post-content-selector) {
+/* $(post-content-selector) {
 	@apply prose prose-neutral max-w-none prose-a:text-primary;
-}
+} */
 
 /* Content width from the `theme.json` file */
-.entry-content > * {
+/* .entry-content > * {
 	@apply mx-auto max-w-content;
-}
+} */
 
 /* Wide width from the `theme.json` file */
 .entry-content > .alignwide {
