@@ -4,5 +4,31 @@
  * Add your own utility classes to this theme. Complex utility classes should
  * be added using Tailwind’s plugin system:
  *
+ * Use utility classes for small, single-purpose classes that should always take precedence over any other style. 
+ *
  * https://tailwindcss.com/docs/plugins#adding-utilities
  */
+
+.card.image-full:before {
+	opacity: 0.65;
+}
+.card.image-full > .card-body {
+	@apply text-white;
+}
+.hero-overlay {
+	@apply bg-gradient-to-l from-base-100;
+	/* background-color: hsl(var(--n) / var(--tw-bg-opacity)); */
+	--tw-bg-opacity: 0.1;
+}
+
+input {
+	@apply input input-bordered w-full max-w-xs;
+}
+
+form {
+	@apply form-control;
+}
+
+label {
+	@apply label label-text;
+}

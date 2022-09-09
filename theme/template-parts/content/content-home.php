@@ -1,72 +1,48 @@
-<section>
-    <h5>Thank you H-Town,for awarding us</h5>
-    <h1>HOUSTON'S BEST ICE CREAM SHOP!</h1>
-    <h5>Houston Press, Best Of Houston® 2020: Best Ice Cream</h5>
-</section>
-
-<section>
-    <h4>As Seen On</h4>
-</section>
-
-<section class="relative">
-    <div class="relative">
-        <h1>Houston’s Premium Shaved Ice and Boba Tea shop(s) since 2010.</h1>
-        <div>
-            <ul>
-                <?php
-                $list = Nu_Queries::getPageContent('home');
-
-                if ($list->have_posts()) : while ($list->have_posts()) : $list->the_post();
-                        $item_1 = get_post_meta(get_the_ID(), 'item_1', true);
-                        $item_2 = get_post_meta(get_the_ID(), 'item_2', true);
-                        $item_3 = get_post_meta(get_the_ID(), 'item_3', true);
-                        $item_4 = get_post_meta(get_the_ID(), 'item_4', true);
-                        $item_5 = get_post_meta(get_the_ID(), 'item_5', true);
-
-                ?>
-                        <li class="list">
-                            <h3 id="<?php echo $item_1; ?>" class="hover_font-bold transition duration-200"><?php echo $item_1 ?></h3>
-                        </li>
-                        <li class="list">
-                            <h3 id="<?php echo $item_2; ?>" class="hover_font-bold transition duration-200"><?php echo $item_2 ?></h3>
-                        </li>
-                        <li class="list">
-                            <h3 id="<?php echo $item_3; ?>" class="hover_font-bold transition duration-200"><?php echo $item_3 ?></h3>
-                        </li>
-                        <li class="list">
-                            <h3 id="<?php echo $item_4; ?>" class="hover_font-bold transition duration-200"><?php echo $item_4 ?></h3>
-                        </li>
-                        <li class="list">
-                            <h3 id="<?php echo $item_5; ?>" class="hover_font-bold transition duration-200"><?php echo $item_5 ?></h3>
-                        </li>
-                <?php
-                    endwhile;
-                    wp_reset_postdata();
-                else :
-                    _e('Sorry, no posts matched your criteria.', 'textdomain');
-                endif;
-                ?>
-            </ul>
-            <a class="inline-block px-12 py-3 text-sm font-medium text-nu-black border border-nu-black rounded hover:bg-nu-black hover:text-white active:bg-nu-black focus:outline-none focus:ring" href="/download">
-                Download
-            </a>
-        </div>
-        <aside class="relative">
-            <h2>Over 1,200 Yelp Reviews!</h2>
-            <?php
-            get_template_part('template-parts/custom-posts/yelp-reviews');
-            ?>
-        </aside>
+<section class="p-5">
+    <div class="w-max mx-auto text-center pb-5">
+        <h5 class="text-sm">Thank you H-Town,for awarding us</h5>
+        <h1 class="">HOUSTON'S BEST ICE CREAM SHOP!</h1>
+        <h5 class="text-sm">Houston Press, Best Of Houston® 2020: Best Ice Cream</h5>
     </div>
+    <?php get_template_part('template-parts/layout/home-hero-section'); ?>
+    <h1 class="mx-auto w-max">Houston’s <b>Premium</b> Shaved Ice and Boba Tea shop(s) <b>since 2010.</b></h1>
 </section>
 
+<!-- <section class="flex max-w-[72.5rem] mx-auto items-center justify-between my-20"> -->
 <section>
-    <div>
-        <h3>Media Mentions</h3>
+    <?php
+    # get_template_part('template-parts/layout/home-image-box');
+    get_template_part('template-parts/layout/home-image-slider');
+    ?>
+</section>
+
+<section class="relative grid grid-cols-2fr ml-[8.75rem] mx-auto">
+    <article class="">
+        <h1>Houston’s <b>Premium</b> Shaved Ice and Boba Tea shop(s) <b>since 2010.</b></h1>
+        <ul class="space-y-[0.188rem]">
+            <?php get_template_part('template-parts/layout/home-list'); ?>
+        </ul>
+        <a class="btn-nu" href="/download">
+            See Menu
+        </a>
+    </article>
+
+    <div class="flex flex-col justify-center items-start">
+        <h3>Over 1,200 Yelp Reviews!</h3>
+        <!-- <h4>Over 1,200 Yelp Reviews!</h4> -->
+        <?php
+        get_template_part('template-parts/custom-posts/yelp-reviews');
+        ?>
     </div>
+
+
+</section>
+
+<section class="max-w-[72.5rem] mx-auto">
+
     <div class="relative">
-        <ul>
-            <?php get_template_part('template-parts/custom-posts/press-releases'); ?>
+        <ul class="flex items-end justify-center">
+            <?php get_template_part('template-parts/custom-posts/press-releases-home'); ?>
 
         </ul>
     </div>

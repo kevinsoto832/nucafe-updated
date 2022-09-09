@@ -6,3 +6,8 @@
  * For esbuild documentation, please see:
  * https://esbuild.github.io/
  */
+ import { hamburgerMenu, navBarScroll, slider } from "./functionality";
+
+ //slider();
+ hamburgerMenu();
+ navBarScroll();

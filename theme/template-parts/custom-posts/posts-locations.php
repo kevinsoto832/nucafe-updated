@@ -19,28 +19,24 @@ if ($location_posts->have_posts()) : while ($location_posts->have_posts()) : $lo
         $store_hours_yelp = get_post_meta(get_the_ID(), 'store_hours_yelp', true);
 ?>
 
-        <article class="flex gap-x-10">
-            <div>
-                <sup class="font-nova italic"><?php echo $store_caption; ?></sup>
-                <h1 class="pt-2"><?php echo $store_name; ?></h1>
-                <div class="py-2">
-                    <a href="https://goo.gl/maps/EW6nz6DkjQ77f14w5"><?php echo $store_address; ?></a><br>
-                    <a href="tel:7137717771"><?php echo $store_phone; ?></a><br>
-                    <h1 class="py-4"><a href="https://goo.gl/maps/EW6nz6DkjQ77f14w5">View Store Hours on Google & Yelp</a></h1>
-                    <div class="flex gap-x-3">
-                        <a href="<?php echo $store_hours_google; ?>">
-                            <?php get_template_part('assets/svg/inline', 'google.svg'); ?>
-                        </a>
-                        <a href="<?php echo $store_hours_yelp; ?>">
-                            <?php get_template_part('assets/svg/inline', 'yelp.svg'); ?>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <figure class="h-auto w-96 bg-no-repeat bg-cover bg-center" style="background-image: url(<?php echo wp_get_attachment_image_url($store_image_id, "full"); ?>);">
+        <article class="flex flex-col px-[2.625rem]">
+            <h1 class="pt-2 font-normal tracking-[-0.54px] uppercase"><?php echo $store_name; ?></h1>
+            <figure class="h-[18.19rem] w-[31rem] bg-no-repeat bg-cover bg-center" style="background-image: url(<?php echo wp_get_attachment_image_url($store_image_id, "full"); ?>);">
             </figure>
 
+            <div class="flex flex-col mt-[0.875rem] gap-[0.875rem]">
+                <a href="https://goo.gl/maps/EW6nz6DkjQ77f14w5"><?php echo $store_address; ?></a>
+                <a href="tel:7137717771"><?php echo $store_phone; ?></a>
+                <a href="https://goo.gl/maps/EW6nz6DkjQ77f14w5">View Store Hours on Google & Yelp</a>
+                <div class="flex gap-x-3 bg-red-200">
+                    <a href="<?php echo $store_hours_google; ?>">
+                        <?php get_template_part('assets/svg/inline', 'google.svg'); ?>
+                    </a>
+                    <a href="<?php echo $store_hours_yelp; ?>">
+                        <?php get_template_part('assets/svg/inline', 'yelp.svg'); ?>
+                    </a>
+                </div>
+            </div>
         </article>
 <?php
     endwhile;

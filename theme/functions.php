@@ -1,4 +1,5 @@
 <?php
+
 /**
  * nucafe functions and definitions
  *
@@ -7,12 +8,12 @@
  * @package nucafe
  */
 
-if ( ! defined( 'NUCAFE_VERSION' ) ) {
+if (!defined('NUCAFE_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define( 'NUCAFE_VERSION', '1.0.0' );
+	define('NUCAFE_VERSION', '1.0.0');
 }
 
-if ( ! function_exists( 'nucafe_setup' ) ) :
+if (!function_exists('nucafe_setup')) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -20,17 +21,18 @@ if ( ! function_exists( 'nucafe_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function nucafe_setup() {
+	function nucafe_setup()
+	{
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on nucafe, use a find and replace
 		 * to change 'nucafe' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'nucafe', get_template_directory() . '/languages' );
+		load_theme_textdomain('nucafe', get_template_directory() . '/languages');
 
 		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+		add_theme_support('automatic-feed-links');
 
 		/*
 		 * Let WordPress manage the document title.
@@ -38,19 +40,20 @@ if ( ! function_exists( 'nucafe_setup' ) ) :
 		 * hard-coded <title> tag in the document head, and expect WordPress to
 		 * provide it for us.
 		 */
-		add_theme_support( 'title-tag' );
+		add_theme_support('title-tag');
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-		add_theme_support( 'post-thumbnails' );
+		add_theme_support('post-thumbnails');
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'nucafe' ),
+				'menu-1' => esc_html__('Primary', 'nucafe'),
+				'menu-2' => esc_html__('Footer', 'nucafe'),
 			)
 		);
 
@@ -84,7 +87,7 @@ if ( ! function_exists( 'nucafe_setup' ) ) :
 		);
 
 		// Add theme support for selective refresh for widgets.
-		add_theme_support( 'customize-selective-refresh-widgets' );
+		add_theme_support('customize-selective-refresh-widgets');
 
 		/**
 		 * Add support for core custom logo.
@@ -104,13 +107,13 @@ if ( ! function_exists( 'nucafe_setup' ) ) :
 		/**
 		 * Add responsive embeds and block editor styles.
 		 */
-		add_theme_support( 'responsive-embeds' );
-		add_theme_support( 'editor-styles' );
-		add_editor_style( 'style-editor.css' );
-		remove_theme_support( 'block-templates' );
+		add_theme_support('responsive-embeds');
+		add_theme_support('editor-styles');
+		add_editor_style('style-editor.css');
+		remove_theme_support('block-templates');
 	}
 endif;
-add_action( 'after_setup_theme', 'nucafe_setup' );
+add_action('after_setup_theme', 'nucafe_setup');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -119,22 +122,24 @@ add_action( 'after_setup_theme', 'nucafe_setup' );
  *
  * @global int $content_width
  */
-function nucafe_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'nucafe_content_width', 640 );
+function nucafe_content_width()
+{
+	$GLOBALS['content_width'] = apply_filters('nucafe_content_width', 640);
 }
-add_action( 'after_setup_theme', 'nucafe_content_width', 0 );
+add_action('after_setup_theme', 'nucafe_content_width', 0);
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function nucafe_widgets_init() {
+function nucafe_widgets_init()
+{
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'nucafe' ),
+			'name'          => esc_html__('Sidebar', 'nucafe'),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'nucafe' ),
+			'description'   => esc_html__('Add widgets here.', 'nucafe'),
 			'before_widget' => '<section id="%1$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2>',
@@ -142,20 +147,21 @@ function nucafe_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'nucafe_widgets_init' );
+add_action('widgets_init', 'nucafe_widgets_init');
 
 /**
  * Enqueue scripts and styles.
  */
-function nucafe_scripts() {
-	wp_enqueue_style( 'nucafe-style', get_stylesheet_uri(), array(), NUCAFE_VERSION );
-	wp_enqueue_script( 'nucafe-script', get_template_directory_uri() . '/js/script.min.js', array(), NUCAFE_VERSION, true );
+function nucafe_scripts()
+{
+	wp_enqueue_style('nucafe-style', get_stylesheet_uri(), array(), NUCAFE_VERSION);
+	wp_enqueue_script('nucafe-script', get_template_directory_uri() . '/js/script.min.js', array(), NUCAFE_VERSION, true);
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+	if (is_singular() && comments_open() && get_option('thread_comments')) {
+		wp_enqueue_script('comment-reply');
 	}
 }
-add_action( 'wp_enqueue_scripts', 'nucafe_scripts' );
+add_action('wp_enqueue_scripts', 'nucafe_scripts');
 
 /**
  * Add the block editor class to TinyMCE.
@@ -165,11 +171,12 @@ add_action( 'wp_enqueue_scripts', 'nucafe_scripts' );
  * @param array $settings TinyMCE settings.
  * @return array
  */
-function nucafe_tinymce_add_class( $settings ) {
+function nucafe_tinymce_add_class($settings)
+{
 	$settings['body_class'] = 'block-editor-block-list__layout';
 	return $settings;
 }
-add_filter( 'tiny_mce_before_init', 'nucafe_tinymce_add_class' );
+add_filter('tiny_mce_before_init', 'nucafe_tinymce_add_class');
 
 /**
  * Custom template tags for this theme.

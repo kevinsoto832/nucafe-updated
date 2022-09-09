@@ -14,12 +14,16 @@ module.exports = {
 	theme: {
 		// Extend the default Tailwind theme.
 		extend: {
+			gridTemplateColumns: {
+				// Simple 16 column grid
+				'2fr': '2fr 1fr',
+			  },
 			fontFamily: {
-				one: "itc-avant-garde-gothic-pro",
+				one: "helvetica",
 				two: "avenir",
 			},
 			colors: {
-				"nu-black": "#212121",
+				"nu-black": "#0F0F0F",
 				// "accent": "#212121",
 				// "midtone": "#212121",
 				// "shadow": "#212121"
@@ -39,7 +43,20 @@ module.exports = {
 
 		// Uncomment below to add additional first-party Tailwind plugins.
 		// require( '@tailwindcss/aspect-ratio' ),
-		require( '@tailwindcss/forms' ),
+		// require( '@tailwindcss/forms' ),
+		require( 'daisyui' ),
 		// require( '@tailwindcss/line-clamp' ),
 	],
+	daisyui: {
+		themes: [
+			{ 
+				mytheme: {
+				"base-100": "#0F0F0F",
+				}
+			},
+			"light", 
+			"dark", 
+			"cupcake",
+		],
+	  }
 };
