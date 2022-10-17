@@ -1,6 +1,3 @@
-/* 
-*/
-
 export function hamburgerMenu() {
 
     const toggleButton = document.getElementsByClassName('toggle-button')[0]

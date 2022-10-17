@@ -51,7 +51,14 @@ module.exports = {
 		themes: [
 			{ 
 				mytheme: {
+				//blank background color.
 				"base-100": "#0F0F0F",
+				//Text (foreground) color
+				"base-content": "#FFFFFF",
+				//color for the card image overlay
+				"neutral" : "#060606",
+				"neutral-content": "#FFFFFF"
+				
 				}
 			},
 			"light", 

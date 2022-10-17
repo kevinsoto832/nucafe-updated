@@ -20,6 +20,7 @@
  * The `$post-title-selector` variable is replaced by PostCSS. Please see the
  * `postcss.config.js` file for details.
  */
+
 /* $(post-title-selector) {
 	@apply mx-auto mb-6 max-w-content text-3xl font-extrabold text-neutral-900;
 } */
@@ -38,6 +39,7 @@
  *
  * https://tailwindcss.com/docs/typography-plugin
  */
+
 /* $(post-content-selector) {
 	@apply prose prose-neutral max-w-none prose-a:text-primary;
 } */
@@ -57,6 +59,30 @@
 	@apply max-w-none;
 }
 
-.btn-nu {
-	@apply inline-block rounded border border-white px-12 py-3 text-sm font-medium text-white hover:bg-nu-black hover:text-white focus:outline-none focus:ring active:bg-nu-black;
+/** GUTENBERG BLOCK EDITOR CUSTOMIZATION */
+
+.wp-block-columns {
+	@apply max-w-2xl;
+}
+
+.wp-block-columns ul {
+	@apply list-disc;
+}
+
+.wp-container-3.wp-block-columns {
+	@apply mx-auto items-center justify-center;
+}
+
+/** The .wp-block-gallery & .wp-block-image class are used in the products page. */
+
+.wp-block-gallery {
+	@apply mx-auto;
+}
+
+.wp-block-image {
+	@apply relative h-[14.75rem] w-[23.5rem];
+}
+
+.wp-block-image img {
+	@apply absolute inset-0 h-full w-full object-cover;
 }

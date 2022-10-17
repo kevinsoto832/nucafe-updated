@@ -3,11 +3,11 @@
 if ($reviews->have_posts()) : while ($reviews->have_posts()) : $reviews->the_post(); ?>
 
         <article class="relative max-w-[17.375rem]">
-            <?php get_template_part('svg/inline', 'yelp-comma.svg'); ?>
-            <figcaption>
-                <?php the_content(); ?> <br>
-                <p><?php the_title(); ?></p>
-            </figcaption>
+            <?php #get_template_part('svg/inline', 'yelp-comma.svg'); 
+            ?>
+
+            <?php the_content(); ?>
+            <p class=""><?php the_title(); ?></p>
         </article>
 <?php
     endwhile;

@@ -22,6 +22,8 @@ _tw is based on Underscores https://underscores.me/ and Varia https://github.com
 Underscores and Varia are distributed under the terms of the GNU GPL v2 or later.
 */
 
+/* HAMBURGER MENU TOGGLE + STYLING */
+
 .toggle-button {
 	display: none;
 }
@@ -64,6 +66,7 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
 #site-navigation ul.active {
 	display: flex;
 }
+
 @media only screen and (max-width: 767px) {
 	.toggle-button {
 		display: flex !important;
@@ -72,7 +75,8 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
 		display: none;
 	}
 }
-/* HAMBURGER MENU TOGGLE + STYLING */
+
+/* NAVBAR SCROLLING */
 
 .scroll-down header {
 	transform: translate3d(0, -100%, 0);
@@ -81,4 +85,23 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
 	/* @apply bg-background; */
 	/* filter: drop-shadow(0 -10px 20px rgb(170, 170, 170)); */
 }
-/* NAVBAR SCROLLING */
+
+/* funny ass attempt at using css to create a scroller. */
+
+.text-scroll-wrapper {
+	will-change: transform;
+	animation: marquee-horizontal 40s linear infinite;
+}
+
+.text-scroll-wrapper div {
+	@apply mr-[2.5rem];
+}
+
+@keyframes marquee-horizontal {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}

@@ -1,25 +1,25 @@
 import gsap from "gsap";
 
 export const slider = () => {
-  let divWidth2 = document.querySelector("#client2").clientWidth;
-  let set = divWidth2 * 1.1;
-  let wrapperWidth2 = divWidth2 * 10;
-  let divi = wrapperWidth2 * 1.1;
+  let boxWidth = document.querySelector("#client").clientWidth;
+  let set = boxWidth * 1; //this multiplier number
+  let wrapperWidth = boxWidth * 9;
+  let divi = wrapperWidth * 1; //should match this multiplier number
   let tl2 = gsap.timeline();
-  let dirFromLeft2 = "+=" + wrapperWidth2;
-  let dirFromRight2 = "-=" + wrapperWidth2;
+  let dirFromLeft2 = "+=" + wrapperWidth;
+  let dirFromRight2 = "-=" + wrapperWidth;
 
   tl2
-    .set("#wrapper2", {
+    .set("#wrapper", {
       x: -set,
     })
 
-    .set(".slide2", {
+    .set(".slide", {
       x: (i) => i * set,
     })
 
     .to(
-      ".slide2",
+      ".slide",
       {
         duration: 60,
         ease: "none",

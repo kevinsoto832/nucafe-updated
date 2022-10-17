@@ -16,7 +16,7 @@
 get_header();
 ?>
 <!-- mt-20 to make space for sticky header -->
-<main id="primary" class="max-w-full mx-auto mt-20">
+<main id="primary" class="max-w-full mx-auto">
 	<!--  prose prose-headings:text-white prose-headings:font-one prose-p:text-white prose-p:font-two -->
 	<?php
 	$theslug = get_the_slug();

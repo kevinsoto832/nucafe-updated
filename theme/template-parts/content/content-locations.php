@@ -1,11 +1,11 @@
-<section class="mx-auto max-w-[72.5rem] px-[2.625rem]">
+<section class="mx-auto px-[2.625rem]">
     <h1 class="uppercase font-bold">Now open with two Houston Locations.</h1>
     <p>Interested in franchising? <b>Click here for more information.</b></p>
 </section>
-<section class="flex mx-auto max-w-[72.5rem]">
+<section class="flex mx-auto">
     <?php
     /* Displays all NU Stores */
-    get_template_part('template-parts/custom-posts/posts', 'locations');
+    get_template_part('template-parts/custom-posts/location-posts');
     ?>
 </section>
 <section class="mx-auto text-center mt-10">

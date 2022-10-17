@@ -13,9 +13,7 @@
 */
 
 /* 
-
-
-
+ *
 font-thin	font-weight: 100;
 font-extralight	font-weight: 200;
 font-light	font-weight: 300;
@@ -29,11 +27,16 @@ font-black	font-weight: 900;
 fontFamily:
 
 one: "helvetica"
-two: "avenir"			
+two: "avenir"
+*
 */
 
 body {
-	@apply bg-background font-two  text-foreground;
+	@apply font-two;
+}
+
+section {
+	@apply max-w-[86rem];
 }
 
 h1 {
@@ -47,9 +50,8 @@ h3 {
 	@apply font-two text-[1.625rem] font-extralight leading-10 tracking-[.65px];
 }
 
-/* ABOUT PAGE TITLE */
 h4 {
-	@apply mb-[2.813rem] font-one  text-[1.625rem] font-light leading-[1.75rem] tracking-[.65px];
+	@apply font-one  text-[1.625rem] font-light leading-[1.75rem] tracking-[.65px];
 }
 
 h5 {
@@ -61,9 +63,24 @@ p {
 }
 
 a {
-	@apply font-two text-xs font-light tracking-[.45px];
+	@apply font-two text-[0.625rem] font-light tracking-[.45px];
 }
 
 b {
 	@apply font-bold;
+}
+
+/** 
+FORM STYLING 
+*/
+
+input {
+	/* @apply input input-bordered w-full max-w-xs;}
+
+form {
+	/* @apply form-control items-start; */
+}
+
+label {
+	@apply label-text;
 }

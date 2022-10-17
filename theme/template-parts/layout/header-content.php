@@ -11,15 +11,19 @@
 ?>
 <!-- is there a way to remove background color when on about page? -->
 <header id="masthead" class="fixed top-0 w-full z-50 transition duration-300 ease-in-out bg-base-100">
-	<nav id="site-navigation" class="flex flex-col md:flex-row items-center justify-between max-w-[72.5rem] p-4 mx-auto">
-		<a class="inline-flex items-center justify-center w-20 h-11 " href="<?php echo esc_url(home_url('/')); ?>">
+	<nav id="site-navigation" class="flex flex-col md:flex-row items-center justify-between p-2 max-w-[86rem] mx-auto">
+
+		<a class="inline-flex items-center justify-center w-20 h-12" href="<?php echo esc_url(home_url('/')); ?>">
 			<?php get_template_part('svg/inline', 'logo.svg'); ?>
 		</a>
+
 		<a href="#" class="toggle-button">
 			<span class="bar"></span>
 			<span class="bar"></span>
 			<span class="bar"></span>
 		</a>
+
+		<a class="uppercase" href="">Find Our Nearest Location</a>
 
 		<?php
 		wp_nav_menu(

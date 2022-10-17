@@ -9,6 +9,7 @@
 */
 
 $location_posts = Nu_Queries::getCPTPosts('locations');
+
 if ($location_posts->have_posts()) : while ($location_posts->have_posts()) : $location_posts->the_post();
         $store_image_id = get_post_meta(get_the_ID(), 'store_image', true);
         $store_caption = get_post_meta(get_the_ID(), 'store_caption', true);
@@ -26,6 +27,7 @@ if ($location_posts->have_posts()) : while ($location_posts->have_posts()) : $lo
 
             <div class="flex flex-col mt-[0.875rem] gap-[0.875rem]">
                 <a href="https://goo.gl/maps/EW6nz6DkjQ77f14w5"><?php echo $store_address; ?></a>
+                <!-- INSERT PHONE EMOJI -->
                 <a href="tel:7137717771"><?php echo $store_phone; ?></a>
                 <a href="https://goo.gl/maps/EW6nz6DkjQ77f14w5">View Store Hours on Google & Yelp</a>
                 <div class="flex gap-x-3 bg-red-200">
@@ -38,9 +40,12 @@ if ($location_posts->have_posts()) : while ($location_posts->have_posts()) : $lo
                 </div>
             </div>
         </article>
+
 <?php
+
     endwhile;
 else :
     _e('Sorry, no posts matched your criteria.', 'textdomain');
 endif;
+
 wp_reset_postdata();

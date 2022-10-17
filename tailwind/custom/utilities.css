@@ -9,26 +9,38 @@
  * https://tailwindcss.com/docs/plugins#adding-utilities
  */
 
+/** DAISY UI CUSTOMIZATIONS */
+
+/** home image box */
 .card.image-full:before {
 	opacity: 0.65;
+	@apply rounded-none;
 }
-.card.image-full > .card-body {
-	@apply text-white;
+.card.image-full:hover::before {
+	opacity: 0;
 }
+
+/** HOME HERO */
+
 .hero-overlay {
-	@apply bg-gradient-to-l from-base-100;
+	/* @apply bg-gradient-to-l from-base-100; */
 	/* background-color: hsl(var(--n) / var(--tw-bg-opacity)); */
-	--tw-bg-opacity: 0.1;
+	/* --tw-bg-opacity: 0; */
 }
 
-input {
-	@apply input input-bordered w-full max-w-xs;
+/** FORM STYLING */
+
+/** form container. More specific than div.wpcf7 */
+.career-form {
+	@apply mx-auto mt-16 grid w-max grid-cols-3 items-start gap-0;
 }
 
-form {
-	@apply form-control;
-}
+/* .career p {
+	@apply bg-red-400;
+} */
 
-label {
-	@apply label label-text;
+/** BASIC UTILITIES */
+
+.btn-nu {
+	@apply inline-block rounded border border-white px-12 py-3 text-sm font-medium text-white hover:bg-nu-black hover:text-white focus:outline-none focus:ring active:bg-nu-black;
 }
