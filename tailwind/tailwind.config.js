@@ -18,10 +18,13 @@ module.exports = {
 				// Simple 16 column grid
 				'2fr': '2fr 1fr',
 			  },
+
+			//font-one & font-two in base.css
 			fontFamily: {
-				one: "helvetica",
-				two: "avenir",
+				bebas: "bebas-neue-by-fontfabric",
+				inria: "Inria Sans",
 			},
+
 			colors: {
 				"nu-black": "#0F0F0F",
 				// "accent": "#212121",
@@ -52,10 +55,10 @@ module.exports = {
 			{ 
 				mytheme: {
 				//blank background color.
-				"base-100": "#0F0F0F",
+				"base-100": "#000000",
 				//Text (foreground) color
 				"base-content": "#FFFFFF",
-				//color for the card image overlay
+				//--n
 				"neutral" : "#060606",
 				"neutral-content": "#FFFFFF"
 				

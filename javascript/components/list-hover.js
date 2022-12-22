@@ -14,9 +14,7 @@ export function listHover() {
     const image4 = document.querySelector("#image_4");
     const image5 = document.querySelector("#image_5");
   
-  
 
-  
     item1.addEventListener("mouseover", () => {
       image1.classList.remove("invisible");
       weAre.style.opacity = ".5";

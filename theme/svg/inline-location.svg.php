@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10.632" height="15.948" viewBox="0 0 10.632 15.948">
+  <path id="iconmonstr-location-1_1_" data-name="iconmonstr-location-1 (1)" d="M9.316,0A5.284,5.284,0,0,0,4,5.051c0,2.79,2.305,6.12,5.316,10.9,3.011-4.776,5.316-8.107,5.316-10.9A5.284,5.284,0,0,0,9.316,0Zm0,7.309a1.993,1.993,0,1,1,1.993-1.993A1.993,1.993,0,0,1,9.316,7.309Z" transform="translate(-4)" fill="#fff" />
+</svg>

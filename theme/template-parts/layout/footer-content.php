@@ -18,7 +18,7 @@
   plugins: [require('@tailwindcss/forms')]
 -->
 
-<footer id="colophon" class="footer p-10 bg-base-200 text-base-content justify-end">
+<footer id="colophon" class="footer p-10 bg-gray-900 text-base-content justify-end">
   <!-- <figure class="w-2/4"><img src="http://nu-cafe-updated.local/wp-content/uploads/2022/09/711press.jpg" alt="Shoes" /></figure> -->
 
   <?php
@@ -32,18 +32,40 @@
   );
   ?>
 
-  <div class="flex flex-col items-start justify-between">
+  <?php
+  wp_nav_menu(
+    array(
+      'menu' => 'Footer-2',
+      'container'      => 'ul',
+      'menu_class' => "flex flex-col items-start justify-between"
+    )
+  );
+  ?>
+
+  <div class="flex flex-col">
     <span class="footer-title">Follow Us!</span>
-    <!-- <p class="text-xs font-bold mb-0">Follow Us!</p> -->
-    <a href="">Instagram</a>
-    <a href="">Facebook</a>
+    <?php
+    wp_nav_menu(
+      array(
+        'menu' => 'Footer-3',
+        'container'      => 'ul',
+        'menu_class' => "flex flex-col items-start justify-between"
+      )
+    );
+    ?>
   </div>
 
-  <div class="flex flex-col items-start justify-between">
+  <div class="flex flex-col">
     <span class="footer-title">Locations</span>
-    <!-- <p class="text-xs font-bold mb-0">Locations</p> -->
-    <a href="">Nu Cafe - Chinatown</a>
-    <a href="">Nu Ice & Drinks - Westheimer & Fountain View </a>
+    <?php
+    wp_nav_menu(
+      array(
+        'menu' => 'Footer-4',
+        'container'      => 'ul',
+        'menu_class' => "flex flex-col items-start justify-between"
+      )
+    );
+    ?>
   </div>
 
   <!-- <div>
@@ -53,20 +75,19 @@
     </div>
   </div> -->
 </footer>
-<footer class="footer footer-center p-10 bg-base-200 text-base-content">
-  <div class="site-info">
-    <a href="<?php echo esc_url(__('https://wordpress.org/', 'pixel-perfect')); ?>" class="normal-case">
-      <?php
-      printf(esc_html__('Nu Copyright 2021 © All rights reserved.'));
-      ?>
-    </a>
+<footer class="relative p-10 bg-gray-800 w-full">
+  <a href="<?php echo esc_url(__('https://wordpress.org/', 'pixel-perfect')); ?>" class="absolute left-8">
+    <?php
+    printf(esc_html__('Nu Copyright 2021 © All rights reserved.'));
+    ?>
+  </a>
 
-    <p class="text-xs font-light">
-      <?php
-      printf(esc_html__('Designed by %1$s', 'pixel-perfect'), '<a href="http://pixelperfecthou.com/" class="normal-case">Pixel Perfect</a>');
-      ?>
-    </p>
+  <p class="text-xs font-light text-center mx-auto">
+    <?php
+    printf(esc_html__('Designed by %1$s', 'pixel-perfect'), '<a href="http://pixelperfecthou.com/" class="normal-case">Pixel Perfect</a>');
+    ?>
+  </p>
 
-    <a href="" class="text-xs font-light">Privacy Policy</a>
-  </div>
+  <a href="" class="absolute right-8 text-xs font-light hover-underline-animation">Privacy Policy</a>
+
 </footer><!-- #colophon -->

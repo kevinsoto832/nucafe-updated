@@ -21,9 +21,9 @@
  * `postcss.config.js` file for details.
  */
 
-/* $(post-title-selector) {
-	@apply mx-auto mb-6 max-w-content text-3xl font-extrabold text-neutral-900;
-} */
+$(post-title-selector) {
+	@apply mx-auto max-w-content text-center text-[4.375rem] font-bold;
+}
 
 /**
  * Post content styles (via Tailwind Typography)
@@ -86,3 +86,14 @@
 .wp-block-image img {
 	@apply absolute inset-0 h-full w-full object-cover;
 }
+
+/* white line found in about page */
+/* .wp-container-1 {
+	padding-left: 20px;
+	margin-left: -20px;
+	border-left: 1px solid #ffffff;
+} */
+
+/* .wp-container-2 {
+	@apply absolute left-0;
+} */

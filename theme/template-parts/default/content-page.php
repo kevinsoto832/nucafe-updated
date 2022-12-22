@@ -10,7 +10,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("mt-[10.438rem] mx-auto max-w-[86rem]"); ?>>
 	<header>
 		<?php
 		if (!is_front_page()) {

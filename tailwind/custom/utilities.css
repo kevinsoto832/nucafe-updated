@@ -9,9 +9,7 @@
  * https://tailwindcss.com/docs/plugins#adding-utilities
  */
 
-/** DAISY UI CUSTOMIZATIONS */
-
-/** home image box */
+/* Daisy UI - Home page image boxes */
 .card.image-full:before {
 	opacity: 0.65;
 	@apply rounded-none;
@@ -20,17 +18,16 @@
 	opacity: 0;
 }
 
-/** HOME HERO */
+/* Daisy UI Home Page Hero Section */
 
-.hero-overlay {
-	/* @apply bg-gradient-to-l from-base-100; */
-	/* background-color: hsl(var(--n) / var(--tw-bg-opacity)); */
-	/* --tw-bg-opacity: 0; */
-}
+/* .hero-overlay {
+	@apply bg-gradient-to-l from-base-100;
+	background-color: hsl(var(--n) / var(--tw-bg-opacity));
+	--tw-bg-opacity: 0;
+} */
 
-/** FORM STYLING */
+/* Form container styling (more specific than div.wpcf7) */
 
-/** form container. More specific than div.wpcf7 */
 .career-form {
 	@apply mx-auto mt-16 grid w-max grid-cols-3 items-start gap-0;
 }
@@ -39,8 +36,16 @@
 	@apply bg-red-400;
 } */
 
-/** BASIC UTILITIES */
+/* 'NU' Button */
 
 .btn-nu {
-	@apply inline-block rounded border border-white px-12 py-3 text-sm font-medium text-white hover:bg-nu-black hover:text-white focus:outline-none focus:ring active:bg-nu-black;
+	@apply inline-block rounded border border-white bg-nu-black px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:bg-nu-black;
+}
+
+.rainbow {
+	background: linear-gradient(to right, #048abf, #add96c, #ff8500, #d90d91);
+}
+
+.hideme {
+	@apply hidden;
 }

@@ -40,8 +40,8 @@
     </div>
 
     <div class="flex flex-col justify-center items-start ml-6">
-        <h3>Over 1,200 Yelp Reviews!</h3>
-        <!-- <h4>Over 1,200 Yelp Reviews!</h4> -->
+        <h3>Over 1,400 Yelp Reviews!</h3>
+        <!-- <h4>Over 1,400 Yelp Reviews!</h4> -->
         <?php
         get_template_part('template-parts/custom-posts/yelp-reviews');
         ?>

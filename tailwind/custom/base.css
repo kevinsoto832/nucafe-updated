@@ -12,74 +12,86 @@
  * editor.
 */
 
-/* 
+/**
+ * Tailwind font-weight & the names of fonts that are used.  
  *
-font-thin	font-weight: 100;
-font-extralight	font-weight: 200;
-font-light	font-weight: 300;
-font-normal	font-weight: 400;
-font-medium	font-weight: 500;
-font-semibold	font-weight: 600;
-font-bold	font-weight: 700;
-font-extrabold	font-weight: 800;
-font-black	font-weight: 900;
-
-fontFamily:
-
-one: "helvetica"
-two: "avenir"
-*
-*/
+ * font-thin		font-weight: 100;
+ * font-extralight	font-weight: 200;
+ * font-light		font-weight: 300;
+ * font-normal		font-weight: 400;
+ * font-medium		font-weight: 500;
+ * font-semibold	font-weight: 600;
+ * font-bold		font-weight: 700;
+ * font-extrabold	font-weight: 800;
+ * font-black		font-weight: 900;
+ *
+ * fontFamily:
+ * one: "helvetica"
+ * two: "avenir"
+ * 
+ * leading = line height (line spacing). Adone XD value is equivalent to CSS. 
+ * 3 = .75rem, 4 = 1rem, 5 = 1.25rem, 6 = 1.5rem, 7 = 1.75rem, 8 = 2rem, 9 = 2.25rem, 10 = 2.5rem.
+ *
+ * tracking = letter (character) spacing. XD value different from CSS.
+ * tighter = -.05em. tight = -.025em. normal = 0em. wide = .025em. wider = .05em. widest = .1em.
+ *
+ * 1rem = 16px. 
+ * em = Relative to the font-size of the element (2em means 2 times the size of the current font)
+ */
 
 body {
-	@apply font-two;
+	@apply font-inria;
 }
 
-section {
+/* section {
 	@apply max-w-[86rem];
-}
+} */
 
 h1 {
-	@apply font-one text-[2rem];
+	@apply font-bebas text-[2rem];
 }
 h2 {
-	@apply font-one text-[2rem] font-normal;
+	@apply font-bebas text-[2.875rem] font-bold uppercase leading-[2.813rem];
 }
 
 h3 {
-	@apply font-two text-[1.625rem] font-extralight leading-10 tracking-[.65px];
+	@apply font-inria text-[1.625rem] font-extralight leading-10 tracking-[.65px];
 }
 
 h4 {
-	@apply font-one  text-[1.625rem] font-light leading-[1.75rem] tracking-[.65px];
+	@apply font-bebas  text-[1.625rem] font-light leading-[1.75rem] tracking-[.65px];
 }
 
 h5 {
-	@apply font-one text-xl font-light tracking-[.3px];
+	@apply font-inria text-sm font-light italic;
+}
+
+/* product page shaved ice, drink links */
+h6 {
+	@apply font-bebas text-[1.25rem] font-light;
 }
 
 p {
-	@apply mb-[1.875rem] font-two  text-base font-extralight tracking-[.45px];
+	@apply font-inria text-base font-light;
 }
 
 a {
-	@apply font-two text-[0.625rem] font-light tracking-[.45px];
+	@apply font-inria text-[0.875rem] font-light uppercase;
 }
 
 b {
 	@apply font-bold;
 }
 
-/** 
-FORM STYLING 
-*/
+/* Form Styling */
 
-input {
-	/* @apply input input-bordered w-full max-w-xs;}
+/* input {
+	 @apply input input-bordered w-full max-w-xs;
+	}
 
 form {
-	/* @apply form-control items-start; */
-}
+	@apply form-control items-start; 
+} */
 
 label {
 	@apply label-text;

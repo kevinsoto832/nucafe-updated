@@ -187,3 +187,13 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * Customizes the excerpt length. 
+ */
+function custom_excerpt_length()
+{
+	return 25;
+}
+
+add_filter('excerpt_length', 'custom_excerpt_length');
