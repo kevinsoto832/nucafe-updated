@@ -16,7 +16,7 @@
             <article class="flex flex-col px-[2.625rem]">
 
                 <div class="flex items-end justify-between">
-                    <h1 class="pt-2 font-normal tracking-[-0.54px] uppercase"><?php echo $store_name; ?></h1>
+                    <h2 class="font-normal uppercase"><?php echo $store_name; ?></h2>
                     <a href="https://goo.gl/maps/EW6nz6DkjQ77f14w5">View Store Hours</a>
                 </div>
 

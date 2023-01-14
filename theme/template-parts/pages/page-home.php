@@ -13,14 +13,14 @@ get_template_part('template-parts/pages/home/home', 'hero-section');
 
 
 <?php
-// I want to make this into 3 sliders, with buttons to manually change slide, but timed to slide automatically after a certain time like 5 sec
-// -thank you h town
-// -photos bubble tea
-// -anothers drinks
 
-get_template_part('template-parts/pages/home/home', 'landing-1');
-get_template_part('template-parts/pages/home/home', 'image-slider');
-get_template_part('template-parts/pages/home/home', 'list');
+//for now, the slider landing section is too complicated to implement. We should just utilize a static landing page  
+
+get_template_part('template-parts/pages/home/home', 'landing-2');
+get_template_part('template-parts/pages/home/home', 'media-bannar');
+get_template_part('template-parts/pages/home/home', 'cards');
+get_template_part('template-parts/pages/home/home', 'list-2');
+//get_template_part('template-parts/pages/home/home', 'image-slider');
 get_template_part('template-parts/pages/home/home', 'yelp');
 
 
@@ -30,5 +30,3 @@ get_template_part('template-parts/pages/home/home', 'yelp');
 //get_template_part('template-parts/pages/home/home', 'image-cards');
 
 ?>
-<h3>example</h3>
-<h3 class="font-inria">example</h3>

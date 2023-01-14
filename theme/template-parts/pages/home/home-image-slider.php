@@ -7,16 +7,17 @@ client
 slide
 
 -->
-<div id="imageSliderContainer" class="mt-4 h-[14.809rem]">
+<div id="imageSliderContainer" class="relative my-4 h-[14.809rem]">
+
     <div id="imageSliderWrapper" class="relative w-max">
-        <figure id="client" class="relative image-slide float-left w-[14.809rem] h-[14.809rem] bg-gray-400 border border-white bg-no-repeat bg-cover bg-center" style="background-image: url();"></figure>
-        <figure class="relative image-slide float-left w-[14.809rem] h-[14.809rem] bg-gray-500 border border-white bg-no-repeat bg-cover bg-center" style="background-image: url();"></figure>
-        <figure class="relative image-slide float-left w-[14.809rem] h-[14.809rem] bg-gray-600 border border-white bg-no-repeat bg-cover bg-center" style="background-image: url();"></figure>
-        <figure class="relative image-slide float-left w-[14.809rem] h-[14.809rem] bg-gray-700 border border-white bg-no-repeat bg-cover bg-center" style="background-image: url();"></figure>
-        <figure class="relative image-slide float-left w-[14.809rem] h-[14.809rem] bg-gray-800 border border-white bg-no-repeat bg-cover bg-center" style="background-image: url();"></figure>
-        <figure class="relative image-slide float-left w-[14.809rem] h-[14.809rem] bg-gray-900 border border-white bg-no-repeat bg-cover bg-center" style="background-image: url();"></figure>
-        <figure class="relative image-slide float-left w-[14.809rem] h-[14.809rem] bg-gray-800 border border-white bg-no-repeat bg-cover bg-center" style="background-image: url();"></figure>
-        <figure class="relative image-slide float-left w-[14.809rem] h-[14.809rem] bg-gray-700 border border-white bg-no-repeat bg-cover bg-center" style="background-image: url();"></figure>
+        <figure id="client" class="relative image-slide float-left w-[14.809rem] h-[14.809rem] image-box-border bg-no-repeat bg-cover bg-center" style="background-image: url();"></figure>
+        <figure class="relative image-slide float-left w-[14.809rem] h-[14.809rem] image-box-border bg-no-repeat bg-cover bg-center" style="background-image: url();"></figure>
+        <figure class="relative image-slide float-left w-[14.809rem] h-[14.809rem] image-box-border bg-no-repeat bg-cover bg-center" style="background-image: url();"></figure>
+        <figure class="relative image-slide float-left w-[14.809rem] h-[14.809rem] image-box-border bg-no-repeat bg-cover bg-center" style="background-image: url();"></figure>
+        <figure class="relative image-slide float-left w-[14.809rem] h-[14.809rem] image-box-border bg-no-repeat bg-cover bg-center" style="background-image: url();"></figure>
+        <figure class="relative image-slide float-left w-[14.809rem] h-[14.809rem] image-box-border bg-no-repeat bg-cover bg-center" style="background-image: url();"></figure>
+        <figure class="relative image-slide float-left w-[14.809rem] h-[14.809rem] image-box-border bg-no-repeat bg-cover bg-center" style="background-image: url();"></figure>
+        <figure class="relative image-slide float-left w-[14.809rem] h-[14.809rem] image-box-border bg-no-repeat bg-cover bg-center" style="background-image: url();"></figure>
     </div>
 </div>
 

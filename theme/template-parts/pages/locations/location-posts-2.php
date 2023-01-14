@@ -1,4 +1,4 @@
-<section class="mx-auto w-max space-y-10">
+<section class="flex mx-auto w-max space-x-10">
     <?php
 
     $location_posts = Nu_Queries::getCPTPosts('locations');
@@ -13,28 +13,28 @@
             $store_hours_yelp = get_post_meta(get_the_ID(), 'store_hours_yelp', true);
     ?>
 
-            <article class="flex flex-col">
+            <article class="flex space-x-4 ">
 
-                <figure class="h-[207px] w-[400px] bg-no-repeat bg-cover bg-center" style="background-image: url(<?php echo wp_get_attachment_image_url($store_image_id, "full"); ?>);">
+                <figure class="h-[172px] w-[332px] bg-no-repeat bg-cover bg-center" style="background-image: url(<?php echo wp_get_attachment_image_url($store_image_id, "full"); ?>);">
                 </figure>
 
-                <div>
-                    <h1 class="font-bold"><?php echo $store_name; ?></h1>
+                <div class="flex flex-col justify-start relative">
+                    <h2 class="font-bold"><?php echo $store_name; ?></h2>
 
-                    <div class="flex items-center">
+                    <div class="flex items-center mt-2">
                         <?php get_template_part('./svg/inline', 'location.svg'); ?>
                         <a href="https://goo.gl/maps/EW6nz6DkjQ77f14w5">
                             <p><?php echo $store_address; ?></p>
                         </a>
                     </div>
 
-                    <div class="flex items-center">
+                    <div class="flex items-center mt-2">
                         <?php get_template_part('./svg/inline', 'phone.svg'); ?>
                         <a href="tel:7137717771">
                             <p><?php echo $store_phone; ?></p>
                         </a>
                     </div>
-                    <a href="" class="btn-nu">View Store Hours</a>
+                    <a href="" class="absolute bottom-0 btn-nu">View Store Hours</a>
                 </div>
 
             </article>

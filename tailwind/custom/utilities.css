@@ -28,10 +28,6 @@
 
 /* Form container styling (more specific than div.wpcf7) */
 
-.career-form {
-	@apply mx-auto mt-16 grid w-max grid-cols-3 items-start gap-0;
-}
-
 /* .career p {
 	@apply bg-red-400;
 } */
@@ -39,7 +35,7 @@
 /* 'NU' Button */
 
 .btn-nu {
-	@apply inline-block rounded border border-white bg-nu-black px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:bg-nu-black;
+	@apply inline-block rounded border border-white bg-nu-black px-12 py-3 text-sm font-bold text-white drop-shadow-brut hover:border-black hover:bg-white hover:text-black focus:outline-none focus:ring active:bg-nu-black;
 }
 
 .rainbow {
@@ -48,4 +44,32 @@
 
 .hideme {
 	@apply hidden;
+}
+
+/* .image-box-border {
+	@apply rounded border border-white drop-shadow-brut;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+	@apply input input-bordered input-sm w-[30rem] bg-white text-black;
+}
+textarea {
+	@apply textarea textarea-bordered w-[30rem] bg-white text-black;
+}
+
+.career-form {
+	@apply relative mx-auto mt-16 w-max;
+}
+
+.form-card {
+	@apply hidden;
+}
+.form-card.active {
+	@apply block;
+} */
+
+.fw-step-part {
+	@apply text-black;
 }

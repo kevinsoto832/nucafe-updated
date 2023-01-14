@@ -1,12 +1,22 @@
-<section class="mt-20 mx-auto border-y-[1px] border-white">
-
-    <!-- the following code with loop thorugh the 'product' posts, and is handled by single-product.php-->
+<section class="relative mt-20 mx-auto border-y-[1px] border-white">
     <aside class="flex justify-center space-x-2 py-4">
         <?php
+        $current_permalink = get_permalink();
+        $slug = basename($current_permalink);
+
         $product_posts = Nu_Queries::getCPTPosts('product');
         if ($product_posts->have_posts()) : while ($product_posts->have_posts()) : $product_posts->the_post();
 
-                the_title(sprintf('<a href="%s"><h6>', esc_url(get_permalink())), '</h6></a>');
+                // Get the slug for the current post
+                $post_name = get_post_field('post_name', get_the_ID());
+
+
+                if ($slug == $post_name) {
+                    the_title(sprintf('<a href="%s"><h6 class="underline">', esc_url(get_permalink())), '</h6></a>');
+                } else {
+                    the_title(sprintf('<a href="%s"><h6 class="opacity-70">', esc_url(get_permalink())), '</h6></a>');
+                }
+
             endwhile;
         else :
             _e('Sorry, no posts matched your criteria.', 'textdomain');
@@ -16,11 +26,3 @@
         ?>
     </aside>
 </section>
-
-<!-- <a class="active:font-bold active-product-link hover-underline-animation">
-            <h6>Shaved Ice</h6>
-        </a>
-        <a class="active:font-bold not-active">
-            <h6>Drinks</h6>
-        </a>
-   -->

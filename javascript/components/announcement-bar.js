@@ -1,4 +1,4 @@
-export function topBarToggle() {
+export function announcementBarToggle() {
 
     const topBarToggle = document.querySelector('#topbar')
     const topBarWrapper = document.querySelector('#topBarWrapper')
@@ -7,6 +7,9 @@ export function topBarToggle() {
      topBarToggle.addEventListener('click',() => {
         topBarWrapper.classList.add("hideme")
         console.log('announcement bar');
+
+        //terminates the script
+        topBarToggle.removeEventListener('click', announcementBarToggle)
 
          })
 

@@ -3,20 +3,30 @@
     <p>Interested in franchising? <b>Click here for more information.</b></p>
 </section> -->
 
-<h1 class="text-center text-[70px] mt-20">
-    <?php
-    $page_title = get_post_meta(get_the_ID(), 'page_title', true);
-    echo $page_title;
-    ?>
-</h1>
+
+<?php
+$page_title = get_post_meta(get_the_ID(), 'page_title', true);
+$locations_image = get_post_meta(get_the_ID(), 'locations_image', true);
+?>
+
+<div class="hero min-h-[23rem] mb-[5.125rem] relative" style="background-image: url(<?php echo wp_get_attachment_image_url($locations_image, "full"); ?>);">
+    <div class="hero-overlay bg-opacity-80"></div>
+    <div class="hero-content text-center text-neutral-content">
+        <div class="max-w-md">
+            <!-- styling for the_title() in components.css , $post-title-selector -->
+            <h1 class="font-bold leading-[65px]"><?php echo $page_title; ?></h1>
+        </div>
+    </div>
+</div>
 
 <?php
 get_template_part('template-parts/pages/locations/location-posts-2');
+get_template_part('template-parts/pages/locations/location-franchising-info');
 ?>
 
 
 <section id="nearest-location" class="mx-auto text-center mt-10">
     <sup>It's easy to find us.</sup>
-    <h1>Enter your Zip Code below to find your nearest location</h1>
+    <p>Enter your Zip Code below to find your nearest location</p>
     <div class="border-1 border-white w-full h-96 mt-10"></div>
 </section>

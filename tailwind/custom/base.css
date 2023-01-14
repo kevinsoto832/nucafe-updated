@@ -47,11 +47,12 @@ body {
 	@apply max-w-[86rem];
 } */
 
+/* Deciding between 60px and 70px */
 h1 {
-	@apply font-bebas text-[2rem];
+	@apply font-bebas text-[4.375rem] font-light leading-[3.75rem];
 }
 h2 {
-	@apply font-bebas text-[2.875rem] font-bold uppercase leading-[2.813rem];
+	@apply font-bebas text-[2.25rem] font-bold uppercase leading-[2.813rem];
 }
 
 h3 {
@@ -59,11 +60,11 @@ h3 {
 }
 
 h4 {
-	@apply font-bebas  text-[1.625rem] font-light leading-[1.75rem] tracking-[.65px];
+	@apply font-bebas  text-[1.625rem] font-light leading-[2.188rem];
 }
 
 h5 {
-	@apply font-inria text-sm font-light italic;
+	@apply font-inria text-[2.188rem] font-light;
 }
 
 /* product page shaved ice, drink links */
@@ -71,16 +72,28 @@ h6 {
 	@apply font-bebas text-[1.25rem] font-light;
 }
 
+label,
 p {
-	@apply font-inria text-base font-light;
+	@apply font-inria text-base font-normal;
+}
+
+input {
+	@apply font-inria text-sm font-normal;
 }
 
 a {
-	@apply font-inria text-[0.875rem] font-light uppercase;
+	@apply font-inria text-[0.813rem] font-light uppercase;
+}
+.sub-menu > li a {
+	@apply font-inria text-[0.813rem] font-bold uppercase;
 }
 
 b {
 	@apply font-bold;
+}
+
+sup {
+	@apply font-inria;
 }
 
 /* Form Styling */
@@ -92,7 +105,3 @@ b {
 form {
 	@apply form-control items-start; 
 } */
-
-label {
-	@apply label-text;
-}

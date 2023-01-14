@@ -14,6 +14,9 @@ module.exports = {
 	theme: {
 		// Extend the default Tailwind theme.
 		extend: {
+			dropShadow: {
+				'brut': '2px 2px 0px rgba(255, 255, 255, 1)'
+			  },
 			gridTemplateColumns: {
 				// Simple 16 column grid
 				'2fr': '2fr 1fr',
@@ -46,7 +49,7 @@ module.exports = {
 
 		// Uncomment below to add additional first-party Tailwind plugins.
 		// require( '@tailwindcss/aspect-ratio' ),
-		// require( '@tailwindcss/forms' ),
+		//require( '@tailwindcss/forms' ),
 		require( 'daisyui' ),
 		// require( '@tailwindcss/line-clamp' ),
 	],
@@ -55,7 +58,8 @@ module.exports = {
 			{ 
 				mytheme: {
 				//blank background color.
-				"base-100": "#000000",
+				"base-100": "#202020",
+				
 				//Text (foreground) color
 				"base-content": "#FFFFFF",
 				//--n

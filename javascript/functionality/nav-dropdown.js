@@ -2,7 +2,7 @@
 
 export function dropdown() {
 
-    document.addEventListener('click', e => {
+    document.addEventListener('mouseover', e => {
 
         //data attribute selectors are useful for having more descriptive HTML code and to separate JS selectors from CSS selectors
 
@@ -18,10 +18,12 @@ export function dropdown() {
 
         //loops thhrough all the other dropdowns and closes the dropdowns that aren't the current dropdown
         document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
-            if (dropDown === currentDropdown) return
-            dropdown.classList.remove("active")
+            //if the current data-dropdown element has the active class on it is also the dropdown button that is targeted in the event listener
+            //, then return. else remove the active class. 
+            if (dropdown === currentDropdown) return
+            dropdown.classList.remove("active");
         })
     })
-
+console.log("dropdown is working");
 
 }
