@@ -1,4 +1,4 @@
-<section class="relative w-full h-[37rem] flex flex-col justify-center items-center bg-base-100 text-black">
+<section class="relative w-full h-auto md:h-[37rem] flex flex-col justify-center items-center bg-base-100 text-white">
 
     <div id="yelp-title" class="w-full flex mb-8">
         <span class="divider h-1 w-full bg-black"></span>
@@ -6,7 +6,7 @@
         <span class="divider h-1 w-full bg-black"></span>
     </div>
 
-    <div class="flex justify-evenly w-full items-center">
+    <div class="flex flex-col md:flex-row justify-evenly w-full items-center">
         <?php
         get_template_part('template-parts/custom-posts/yelp-reviews');
         ?>

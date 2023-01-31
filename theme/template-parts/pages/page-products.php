@@ -18,6 +18,6 @@ Highlight thse shaved ice flavors:
 ?>
 
 <?php
-get_template_part('template-parts/pages/products/product', 'pagination');
-get_template_part('template-parts/pages/products/product', 'catering-info');
+get_template_part('template-parts/pages/product', 'pagination');
+get_template_part('template-parts/pages/product', 'catering-info');
 ?>

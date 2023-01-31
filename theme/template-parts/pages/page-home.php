@@ -16,12 +16,12 @@ get_template_part('template-parts/pages/home/home', 'hero-section');
 
 //for now, the slider landing section is too complicated to implement. We should just utilize a static landing page  
 
-get_template_part('template-parts/pages/home/home', 'landing-2');
-get_template_part('template-parts/pages/home/home', 'media-bannar');
-get_template_part('template-parts/pages/home/home', 'cards');
-get_template_part('template-parts/pages/home/home', 'list-2');
+get_template_part('template-parts/pages/home', 'landing');
+get_template_part('template-parts/pages/home', 'media-bannar');
+get_template_part('template-parts/pages/home', 'cards');
+get_template_part('template-parts/pages/home', 'list');
 //get_template_part('template-parts/pages/home/home', 'image-slider');
-get_template_part('template-parts/pages/home/home', 'yelp');
+get_template_part('template-parts/pages/home', 'yelp');
 
 
 

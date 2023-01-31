@@ -12,10 +12,7 @@
 
 ?>
 
-
 <footer id="colophon" class="footer p-10 bg-base-100 text-base-content justify-end">
-    <!-- <figure class="w-2/4"><img src="http://nu-cafe-updated.local/wp-content/uploads/2022/09/711press.jpg" alt="Shoes" /></figure> -->
-
     <?php
     wp_nav_menu(
         array(
@@ -62,28 +59,23 @@
         );
         ?>
     </div>
-
-    <!-- <div>
-    <div class="grid grid-flow-col gap-4">
-      <a> get_template_part('svg/inline', 'facebook.svg'); ?> </a>
-      <a> get_template_part('svg/inline', 'instagram.svg'); ?></a>
-    </div>
-  </div> -->
 </footer>
-<footer class="relative p-10 bg-base-100 w-full">
-    <a href="<?php echo esc_url(__('https://wordpress.org/', 'pixel-perfect')); ?>" class="absolute left-8">
+
+<footer class="relative p-10 bg-base-100 w-full ">
+
+    <a href="<?php echo esc_url(__('https://wordpress.org/', 'pixel-perfect')); ?>" class="md:absolute md:left-8">
         <?php
         printf(esc_html__('Nu Copyright 2021 © All rights reserved.'));
         ?>
     </a>
 
-    <p class="text-xs font-light text-center mx-auto">
+    <p class="font-light md:text-center md:mx-auto text-[0.813rem] uppercase">
         <?php
-        printf(esc_html__('Designed by %1$s', 'pixel-perfect'), '<a href="http://pixelperfecthou.com/" class="normal-case">Pixel Perfect</a>');
+        printf(esc_html__('Designed by %1$s', 'pixel-perfect'), '<a href="http://pixelperfecthou.com/">Pixel Perfect</a>');
         ?>
     </p>
 
-    <a href="" class="absolute right-8 text-xs font-light">Privacy Policy</a>
+    <a href="" class="md:absolute md:right-8">Privacy Policy</a>
 
 </footer><!-- #colophon -->
 

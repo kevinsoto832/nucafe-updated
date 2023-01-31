@@ -3,13 +3,13 @@
 if ($reviews->have_posts()) : while ($reviews->have_posts()) : $reviews->the_post(); ?>
 
         <article class="relative w-[17.375rem] h-[16.5rem]">
+
             <div class="mb-4">
                 <?php
                 //stars
                 get_template_part('./svg/inline', 'stars.svg');
                 ?>
             </div>
-
 
             <?php the_content(); ?>
 

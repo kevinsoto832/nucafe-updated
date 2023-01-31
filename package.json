@@ -49,5 +49,8 @@
 		"prod": "npm run production",
 		"zip": "node node_scripts/zip.js nucafe",
 		"bundle": "run-s production zip"
+	},
+	"dependencies": {
+		"a": "^3.0.1"
 	}
 }

@@ -35,31 +35,34 @@
 /* 'NU' Button */
 
 .btn-nu {
-	@apply inline-block rounded border border-white bg-nu-black px-12 py-3 text-sm font-bold text-white drop-shadow-brut hover:border-black hover:bg-white hover:text-black focus:outline-none focus:ring active:bg-nu-black;
+	@apply inline-block rounded border border-nu-black bg-white px-10 py-3 text-center text-xs font-bold text-nu-black drop-shadow-brut hover:border-black hover:text-black  focus:outline-none focus:ring active:bg-nu-black md:px-12;
+}
+.btn-nu:hover {
+	background: linear-gradient(to right, #048abf, #add96c, #ff8500, #d90d91);
 }
 
 .rainbow {
 	background: linear-gradient(to right, #048abf, #add96c, #ff8500, #d90d91);
 }
 
-.hideme {
+/* .hideme {
 	@apply hidden;
 }
 
-/* .image-box-border {
+.image-box-border {
 	@apply rounded border border-white drop-shadow-brut;
-}
+} */
 
 input[type="text"],
 input[type="tel"],
 input[type="email"] {
-	@apply input input-bordered input-sm w-[30rem] bg-white text-black;
+	@apply input input-bordered input-xs w-[30rem] bg-slate-100 text-sm text-black;
 }
 textarea {
-	@apply textarea textarea-bordered w-[30rem] bg-white text-black;
+	@apply textarea textarea-bordered w-[30rem] bg-slate-100 text-sm text-black;
 }
 
-.career-form {
+/* .career-form {
 	@apply relative mx-auto mt-16 w-max;
 }
 
@@ -68,8 +71,8 @@ textarea {
 }
 .form-card.active {
 	@apply block;
-} */
+}
 
 .fw-step-part {
 	@apply text-black;
-}
+} */

@@ -1,17 +1,38 @@
 export function hamburgerMenu() {
 
-    const toggleButton = document.getElementsByClassName('toggle-button')[0]
-    const navbarLinks = document.querySelector('#primary-menu')
-    const hamburgerBar = document.getElementsByClassName('bar')
+    const toggleButton = document.querySelector('.toggle-button')
+    const linkContainer = document.querySelector('#primary-menu')
+    const navLinks = document.querySelectorAll('#primary-menu li')
+    const divPage = document.querySelector('#page')
+    const hamburgerBar = document.querySelectorAll('.bar')
 
     toggleButton.addEventListener('click',() => {
 
-        navbarLinks.classList.toggle('active')
+        linkContainer.classList.toggle('active')
+        divPage.classList.toggle('overflow-hidden')
 
-        for (var i = 0; i < hamburgerBar.length; i++) {
-            hamburgerBar[i].classList.toggle('active')
-          }
-
+          hamburgerBar.forEach(bar => {
+            bar.classList.toggle('active')
+          })
         })
 
+    navLinks.forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        if(linkContainer.classList.contains('active')) linkContainer.classList.remove('active')
+        if(divPage.classList.contains('overflow-hidden')) divPage.classList.remove('active')
+
+        hamburgerBar.forEach(bar => {
+          if(bar.classList.contains('active')) bar.classList.remove('active')
+        })
+
+      })
+    })
+
+      
+
     }
+
+    // if the navbarlinks has the class active in it, then target the div 
+    //with the id of page and change the overflow-x-hidden to overflow-hidden

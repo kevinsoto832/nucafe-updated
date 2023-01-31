@@ -47,7 +47,7 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
 }
 .toggle-button .bar:first-child.active {
 	opacity: 1;
-	transform: rotate(45deg) translate(-3px, -1px);
+	transform: rotate(45deg) translate(0, -5px);
 }
 .toggle-button .bar:nth-last-child(2) {
 	transform-origin: 0% 100%;
@@ -60,19 +60,19 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
 	transform-origin: 0% 100%;
 }
 .toggle-button .bar:nth-last-child(1).active {
-	transform: rotate(-45deg) translate(0, -1px);
-}
-
-#site-navigation ul.active {
-	display: flex;
+	transform: rotate(-45deg) translate(0, 5px);
 }
 
 @media only screen and (max-width: 767px) {
 	.toggle-button {
 		display: flex !important;
+		flex-direction: column;
 	}
-	#site-navigation ul {
+	#primary-menu {
 		display: none;
+	}
+	#primary-menu.active {
+		display: flex;
 	}
 }
 

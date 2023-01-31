@@ -15,7 +15,7 @@ module.exports = {
 		// Extend the default Tailwind theme.
 		extend: {
 			dropShadow: {
-				'brut': '2px 2px 0px rgba(255, 255, 255, 1)'
+				'brut': '1px 1px 0px rgba(255, 255, 255, 1)'
 			  },
 			gridTemplateColumns: {
 				// Simple 16 column grid
@@ -30,6 +30,10 @@ module.exports = {
 
 			colors: {
 				"nu-black": "#0F0F0F",
+				"nu-blue": "#048abf",
+				"nu-green": "#add96c",
+				"nu-orange": "#ff8500",
+				"nu-pink": "#d90d91", 
 				// "accent": "#212121",
 				// "midtone": "#212121",
 				// "shadow": "#212121"
@@ -58,7 +62,7 @@ module.exports = {
 			{ 
 				mytheme: {
 				//blank background color.
-				"base-100": "#202020",
+				"base-100": "#0F0F0F",
 				
 				//Text (foreground) color
 				"base-content": "#FFFFFF",

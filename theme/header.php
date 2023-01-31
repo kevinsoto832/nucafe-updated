@@ -34,7 +34,7 @@
 	<div id="page" class="overflow-x-hidden">
 
 		<header id="masthead" class="fixed top-0 w-full z-50 transition duration-300 ease-in-out bg-base-100">
-			<nav id="site-navigation" class="relative flex flex-col md:flex-row items-center justify-between py-5 px-8 mx-auto">
+			<nav id="site-navigation" class="relative flex flex-row-reverse md:flex-row items-center justify-between py-5 px-8 mx-auto">
 
 				<a class="inline-flex items-center justify-center w-[4.152rem] h-[1.563rem] ml-12" href="<?php echo esc_url(home_url('/')); ?>">
 					<?php
@@ -57,7 +57,7 @@
 						'theme_location' => 'menu-1',
 						'menu_id'        => 'primary-menu',
 						'container'      => 'ul',
-						'menu_class' => "relative flex flex-col md:flex-row items-center max-w-[31.188rem] w-full justify-between"
+						'menu_class' => "absolute inset-0 justify-center items-start md:relative flex flex-col md:flex-row md:items-center h-screen md:h-auto bg-nu-black md:bg-inherit z-10 md:max-w-[31.188rem] w-full md:justify-between"
 					)
 				);
 				?>

@@ -8,6 +8,8 @@ export function navBarScroll() {
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset
 
+        if(document.querySelector("#page").classList.contains('overflow-hidden')) return
+
         if (currentScroll <= 0) {
             body.classList.remove("scroll-up")
         }

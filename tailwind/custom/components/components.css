@@ -75,6 +75,8 @@ $(post-title-selector) {
 
 /** The .wp-block-gallery & .wp-block-image class are used in the products page. */
 
+/**   */
+
 .wp-block-gallery {
 	@apply mx-auto;
 }
@@ -85,6 +87,9 @@ $(post-title-selector) {
 
 .wp-block-image img {
 	@apply absolute inset-0 h-full w-full object-cover;
+}
+
+@media (max-width: 768px) {
 }
 
 /* white line found in about page */

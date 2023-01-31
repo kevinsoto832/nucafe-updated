@@ -1,4 +1,4 @@
-<section class="flex mx-auto w-max space-x-10">
+<section class="flex flex-col md:flex-row mx-auto items-center w-max space-y-8 md:space-y-0 md:space-x-10">
     <?php
 
     $location_posts = Nu_Queries::getCPTPosts('locations');
@@ -13,22 +13,23 @@
             $store_hours_yelp = get_post_meta(get_the_ID(), 'store_hours_yelp', true);
     ?>
 
-            <article class="flex space-x-4 ">
+            <article class="flex flex-col items-center md:items-stretch justify-center md:flex-row md:space-x-4 ">
 
-                <figure class="h-[172px] w-[332px] bg-no-repeat bg-cover bg-center" style="background-image: url(<?php echo wp_get_attachment_image_url($store_image_id, "full"); ?>);">
+                <figure class="h-[20rem] w-full md:w-[332px] bg-no-repeat bg-cover bg-center" style="background-image: url(<?php echo wp_get_attachment_image_url($store_image_id, "full"); ?>);">
                 </figure>
 
-                <div class="flex flex-col justify-start relative">
-                    <h2 class="font-bold"><?php echo $store_name; ?></h2>
+                <div class="flex flex-col space-y-2 justify-start items-end md:items-start relative pb-16 md:pb-0">
 
-                    <div class="flex items-center mt-2">
+                    <h2 class="font-bold mt-4 md:mt-0"><?php echo $store_name; ?></h2>
+
+                    <div class="flex flex-row-reverse md:flex-row items-center gap-x-2">
                         <?php get_template_part('./svg/inline', 'location.svg'); ?>
                         <a href="https://goo.gl/maps/EW6nz6DkjQ77f14w5">
                             <p><?php echo $store_address; ?></p>
                         </a>
                     </div>
 
-                    <div class="flex items-center mt-2">
+                    <div class="flex flex-row-reverse md:flex-row items-center gap-x-2">
                         <?php get_template_part('./svg/inline', 'phone.svg'); ?>
                         <a href="tel:7137717771">
                             <p><?php echo $store_phone; ?></p>
