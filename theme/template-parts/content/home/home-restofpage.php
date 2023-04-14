@@ -6,7 +6,7 @@
             <div id="blackBar" class="z-10 bg-white h-1 w-[48.33rem] my-6"></div>
             <div class="flex justify-between">
                 <?php
-                get_template_part('template-parts/layout/home', 'list');
+                get_template_part('template-parts/components/home', 'list');
                 ?>
             </div>
             <button class="btn-nu">See Menu</button>
@@ -43,7 +43,7 @@
         <h3>Over 1,400 Yelp Reviews!</h3>
         <!-- <h4>Over 1,400 Yelp Reviews!</h4> -->
         <?php
-        get_template_part('template-parts/custom-posts/yelp-reviews');
+        get_template_part('template-parts/com/yelp-reviews');
         ?>
         <button class="btn-nu">Read More Yelp Reviews</button>
     </div>

@@ -14,27 +14,26 @@
  */
 
 get_header();
-$theslug = get_the_slug();
+// $slug = get_the_slug();
 $current_permalink = get_permalink();
 $slug = basename($current_permalink);
 
-$myPageTemplatePart = 'template-parts/pages/page-' . $theslug;
+$get_the_page = 'template-parts/content/' . $slug . '/' . $slug;
+$get_the_page_2 = "'" . $get_the_page . "'";
 
-while (have_posts()) :
-	the_post(); ?>
-	<main id="primary" class="max-w-full relative top-0 mx-auto mt-16" data-barba="container" data-barba-namespace="<?php if (is_page('home')) {
-																														echo 'home';
-																													} else {
-																														echo $slug;
-																													}
-																													?>">
+
+
+while (have_posts()) : the_post(); ?>
+	<main id="primary" class="max-w-full relative top-0 mx-auto" data-barba="container" data-barba-namespace="<?php if (is_page('home')) : echo 'home';
+																												else : echo $slug;
+																												endif;
+																												?>">
 		<?php
 
 		if (is_front_page()) {
-			get_template_part('template-parts/pages/page-home');
-			//figure out a better way to do this?
+			get_template_part('template-parts/content/home/home');
 		} elseif (is_page(array('about', 'locations', 'products', 'press', 'careers', 'contact'))) {
-			get_template_part($myPageTemplatePart);
+			get_template_part('template-parts/content/' . $slug . '/' . $slug);
 		} else {
 			get_template_part('template-parts/default/content', 'page');
 		}
@@ -43,5 +42,5 @@ while (have_posts()) :
 <?php
 
 endwhile; // End of the loop.
-// get_sidebar();
+
 get_footer();

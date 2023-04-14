@@ -6,7 +6,7 @@ $page_id = $page_object->ID;
 $permalink = get_permalink($page_id);
 ?>
 
-<div class="w-[513px]">
+<section class="w-[513px]">
     <h5 class="text-[13px]">Catering Information</h5>
     <h1>Want to serve delicious bubble tea at your next event? </h1>
     <p>We have served over to 500 drinks for gatherings and events. <br><br>
@@ -18,4 +18,4 @@ $permalink = get_permalink($page_id);
 
         Tell us the how many drinks, the time and location of your upcoming event, and let us brew, prepare, and package drinks for your next get-together in Houston. </p>
     <a class="btn-nu" href="<?php echo $permalink ?>">Learn more about our catering services!</a>
-</div>
+</section>

@@ -16,11 +16,9 @@ export const slider = () => {
     .set("#imageSliderWrapper", {
       x: -set,
     })
-
     .set(".image-slide", {
       x: (i) => i * 16,
     })
-
     .to(
       ".image-slide",
       {

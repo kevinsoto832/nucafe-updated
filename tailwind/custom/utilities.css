@@ -9,70 +9,68 @@
  * https://tailwindcss.com/docs/plugins#adding-utilities
  */
 
-/* Daisy UI - Home page image boxes */
-.card.image-full:before {
-	opacity: 0.65;
-	@apply rounded-none;
+:root {
+	--rainbow-color: linear-gradient(
+		to right,
+		#048abf,
+		#add96c,
+		#ff8500,
+		#d90d91
+	);
 }
-.card.image-full:hover::before {
+
+/* Text Scroller animation. Used in: Home Page */
+
+.text-scroll-wrapper {
+	will-change: transform;
+	animation: marquee-horizontal 40s linear infinite;
+}
+.text-scroll-wrapper div {
+	@apply mr-[2.5rem];
+}
+
+@keyframes marquee-horizontal {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+/* Testing this for the splash screen */
+
+#splash-screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #060606;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+	opacity: 1;
+	transition: opacity 1s ease-out;
+}
+#splash-screen-alt {
 	opacity: 0;
+	pointer-events: none;
+}
+#splash-screen.hide {
+	opacity: 0;
+	pointer-events: none;
 }
 
-/* Daisy UI Home Page Hero Section */
-
-/* .hero-overlay {
-	@apply bg-gradient-to-l from-base-100;
-	background-color: hsl(var(--n) / var(--tw-bg-opacity));
-	--tw-bg-opacity: 0;
-} */
-
-/* Form container styling (more specific than div.wpcf7) */
-
-/* .career p {
-	@apply bg-red-400;
-} */
-
-/* 'NU' Button */
-
-.btn-nu {
-	@apply inline-block rounded border border-nu-black bg-white px-10 py-3 text-center text-xs font-bold text-nu-black drop-shadow-brut hover:border-black hover:text-black  focus:outline-none focus:ring active:bg-nu-black md:px-12;
-}
-.btn-nu:hover {
-	background: linear-gradient(to right, #048abf, #add96c, #ff8500, #d90d91);
+/* #page {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 1s ease-in-out, visibility 0s 1s;
 }
 
-.rainbow {
-	background: linear-gradient(to right, #048abf, #add96c, #ff8500, #d90d91);
-}
-
-/* .hideme {
-	@apply hidden;
-}
-
-.image-box-border {
-	@apply rounded border border-white drop-shadow-brut;
-} */
-
-input[type="text"],
-input[type="tel"],
-input[type="email"] {
-	@apply input input-bordered input-xs w-[30rem] bg-slate-100 text-sm text-black;
-}
-textarea {
-	@apply textarea textarea-bordered w-[30rem] bg-slate-100 text-sm text-black;
-}
-
-/* .career-form {
-	@apply relative mx-auto mt-16 w-max;
-}
-
-.form-card {
-	@apply hidden;
-}
-.form-card.active {
-	@apply block;
-}
-
-.fw-step-part {
-	@apply text-black;
+#splash-screen.hide ~ #page {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 1s ease-in-out;
 } */

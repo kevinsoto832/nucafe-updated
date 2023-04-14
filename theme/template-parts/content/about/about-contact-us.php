@@ -1,10 +1,7 @@
 <?php
-get_template_part('template-parts/pages/about', 'hero');
-
 $contact_us_title = get_post_meta(get_the_ID(), 'contact_us_title', true);
 $contact_us_description = get_post_meta(get_the_ID(), 'contact_us_description', true);
 ?>
-
 
 <section id="contact-us" class="w-full px-16 z-10 relative">
     <div class="flex w-full items-start justify-between gap-x-8">

@@ -1,5 +1,5 @@
 <!-- before I used 44rem. -->
-<div class="hero justify-items-end min-h-[33.75rem]" style="background-image: url(http://nu-cafe-updated.local/wp-content/uploads/2022/09/DSC01363.jpg);">
+<div class="hero justify-items-end min-h-[33.75rem]" style="background-image: url(http://nu-cafe-updated.local/wp-content/uploads/2023/01/Group-376.jpg);">
     <div class="hero-overlay bg-opacity-40"></div>
     <div class="hero-content">
         <div class="max-w-md text-left">

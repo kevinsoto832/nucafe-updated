@@ -1,0 +1,23 @@
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+	@apply input input-bordered input-xs w-[30rem] bg-slate-100 text-sm text-black;
+}
+textarea {
+	@apply textarea textarea-bordered w-[30rem] bg-slate-100 text-sm text-black;
+}
+
+/* .career-form {
+	@apply relative mx-auto mt-16 w-max;
+}
+
+.form-card {
+	@apply hidden;
+}
+.form-card.active {
+	@apply block;
+}
+
+.fw-step-part {
+	@apply text-black;
+} */

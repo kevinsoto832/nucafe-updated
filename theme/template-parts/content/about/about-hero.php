@@ -17,18 +17,18 @@ that way we can create this component this whenever we need multiple instances a
     <div class="hero min-h-[23rem] relative place-items-start items-center" style="background-image: url(<?php echo wp_get_attachment_image_url($about_image, "full"); ?>);">
         <div class="hero-overlay bg-opacity-80"></div>
         <div class="hero-content text-left text-neutral-content">
-            <div class="max-w-4xl">
-                <h1 class="font-bold pl-16"><?php echo $about_page_title; ?></h1>
+            <div class="max-w-md text-white ml-20">
+                <h1 class="font-bold"><?php echo $about_page_title; ?></h1>
             </div>
         </div>
     </div>
 
-    <div class="p-16 z-20">
-        <h1><?php echo $background_story_title; ?></h1>
+    <div class="p-20 z-20 md:min-h-[44vh] md:pr-44">
+        <h2><?php echo $background_story_title; ?></h2>
         <p class="mt-2"><?php echo $background_story; ?></p>
     </div>
 
-    <div class="hero min-h-[43.375rem] left-[12.5rem] absolute z-0" style="background-image: url(http://nu-cafe-updated.local/wp-content/uploads/2023/01/pexels-cottonbro-studio-6590920-scaled.jpg);">
+    <div class="hero min-h-[43.375rem] right-[12rem] absolute z-0" style="background-image: url(http://nu-cafe-updated.local/wp-content/uploads/2023/01/pexels-cottonbro-studio-6590920-scaled.jpg);">
         <div class="hero-overlay bg-opacity-70"></div>
     </div>
 

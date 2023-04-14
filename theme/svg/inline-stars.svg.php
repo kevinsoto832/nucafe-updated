@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="146" height="24" viewBox="0 0 146 24">
+<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="146" height="24" viewBox="0 0 146 24">
     <g id="Yelp_stars" data-name="Yelp stars" transform="translate(-647 -2948.941)">
         <g id="icon_toggle_star_24px" data-name="icon/toggle/star_24px" transform="translate(647 2948.941)">
             <rect id="Boundary" width="24" height="24" fill="none" />

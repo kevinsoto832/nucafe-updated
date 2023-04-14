@@ -35,6 +35,7 @@
                             <p><?php echo $store_phone; ?></p>
                         </a>
                     </div>
+
                     <a href="" class="absolute bottom-0 btn-nu">View Store Hours</a>
                 </div>
 

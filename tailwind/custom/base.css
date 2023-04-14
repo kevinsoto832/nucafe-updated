@@ -7,14 +7,6 @@
  */
 
 /**
- * This uses the background and foreground colors declared in the
- * `theme.json` file and is applied both to the frontend and in the block
- * editor.
-*/
-
-/**
- * Tailwind font-weight & the names of fonts that are used.  
- *
  * font-thin		font-weight: 100;
  * font-extralight	font-weight: 200;
  * font-light		font-weight: 300;
@@ -29,13 +21,14 @@
  * one: "helvetica"
  * two: "avenir"
  * 
- * leading = line height (line spacing). Adone XD value is equivalent to CSS. 
+ * leading 
  * 3 = .75rem, 4 = 1rem, 5 = 1.25rem, 6 = 1.5rem, 7 = 1.75rem, 8 = 2rem, 9 = 2.25rem, 10 = 2.5rem.
  *
- * tracking = letter (character) spacing. XD value different from CSS.
+ * tracking 
  * tighter = -.05em. tight = -.025em. normal = 0em. wide = .025em. wider = .05em. widest = .1em.
  *
  * 1rem = 16px. 
+ *
  * em = Relative to the font-size of the element (2em means 2 times the size of the current font)
  */
 
@@ -47,64 +40,42 @@ body {
 	@apply max-w-[86rem];
 } */
 
-/* Deciding between 60px and 70px */
 h1 {
-	@apply font-bebas text-[2.5rem] font-light leading-[2rem] md:text-[4.375rem] md:leading-[3.75rem];
+	@apply font-bebas text-[3.75rem] font-light leading-[3.25rem] xs:text-[3.75rem] xs:leading-[3.25rem];
 }
 h2 {
-	@apply font-bebas text-[2.25rem] font-bold uppercase leading-[2.813rem];
+	@apply font-bebas text-[3rem] font-normal uppercase leading-[2.813rem];
 }
-
 h3 {
 	@apply font-inria text-[1rem] font-extralight leading-8 tracking-[.65px] md:text-[1.625rem] md:leading-10;
 }
-
 h4 {
-	@apply font-bebas  text-[1.625rem] font-light leading-[2.188rem];
+	@apply font-bebas text-[2.188rem] font-light leading-[2.5rem];
 }
-
 h5 {
 	@apply font-inria text-[1.25rem] font-light md:text-[2.188rem];
 }
-
-/* product page shaved ice, drink links */
 h6 {
 	@apply font-bebas text-[1.25rem] font-light;
 }
-
 p {
-	@apply font-inria text-base font-normal;
+	@apply font-inria text-base font-light leading-[1.875rem];
 }
-
 label {
 	@apply font-inria text-sm font-normal leading-7;
 }
-
 input {
 	@apply font-inria text-sm font-normal;
 }
-
 a {
-	@apply font-inria text-[0.813rem] font-light uppercase;
+	@apply font-inria text-[0.813rem] font-medium uppercase;
 }
 .sub-menu > li a {
 	@apply font-inria text-[0.813rem] font-bold uppercase;
 }
-
 b {
 	@apply font-bold;
 }
-
 sup {
 	@apply font-inria;
 }
-
-/* Form Styling */
-
-/* input {
-	 @apply input input-bordered w-full max-w-xs;
-	}
-
-form {
-	@apply form-control items-start; 
-} */

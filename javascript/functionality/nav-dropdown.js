@@ -13,6 +13,7 @@ export function dropdown() {
         let currentDropdown
         if (isDropdownButton) {
             currentDropdown = e.target.closest("[data-dropdown]")
+            // console.log(currentDropdown.children[1])
             currentDropdown.classList.toggle("active")
         }
 

@@ -12,7 +12,14 @@ module.exports = {
 		'./theme/theme.json',
 	],
 	theme: {
-		// Extend the default Tailwind theme.
+		screens: {
+			'xs': '475px',
+			'sm': '640px',
+			'md': '768px',
+			'lg': '1024px',
+			'xl': '1280px',
+			'2xl': '1536px',
+		},
 		extend: {
 			dropShadow: {
 				'brut': '1px 1px 0px rgba(255, 255, 255, 1)'
@@ -62,7 +69,7 @@ module.exports = {
 			{ 
 				mytheme: {
 				//blank background color.
-				"base-100": "#0F0F0F",
+				"base-100": "#060606",
 				
 				//Text (foreground) color
 				"base-content": "#FFFFFF",

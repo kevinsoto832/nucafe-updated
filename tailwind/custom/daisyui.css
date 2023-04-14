@@ -1,0 +1,18 @@
+/* Daisy UI - Home page image boxes */
+.card.image-full:before {
+	opacity: 0.65;
+	@apply rounded-none;
+}
+.card.image-full:hover::before {
+	opacity: 0;
+}
+
+/* .hero-content {
+	background: var(--rainbow-color);
+} */
+
+@media only screen and (min-width: 768px) {
+	#home-landing {
+		background: var(--rainbow-color);
+	}
+}

@@ -4,17 +4,14 @@ if ($reviews->have_posts()) : while ($reviews->have_posts()) : $reviews->the_pos
 
         <article class="relative w-[17.375rem] h-[16.5rem]">
 
-            <div class="mb-4">
-                <?php
-                //stars
-                get_template_part('./svg/inline', 'stars.svg');
-                ?>
+            <div class="mb-4 text-white">
+                <?php get_template_part('./svg/inline', 'stars.svg'); ?>
             </div>
 
             <?php the_content(); ?>
 
             <!-- Yelp Reviewer name -->
-            <div class="flex justify-start items-end mt-8">
+            <div class="flex justify-between items-center mt-8">
 
                 <div class="avatar">
                     <div class="w-9 rounded-full">

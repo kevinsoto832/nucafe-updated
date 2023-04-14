@@ -25,29 +25,16 @@ $(post-title-selector) {
 	@apply mx-auto max-w-content text-center text-[4.375rem] font-bold;
 }
 
-/**
- * Post content styles (via Tailwind Typography)
- *
- * These will be applied to all content blocks with an `entry-content` class on
- * the frontend and within the block editor.
- *
- * The `$post-content-selector` variable is replaced by PostCSS. Please see the
- * `postcss.config.js` file for details.
- *
- * For details on how to customize Tailwind Typography via its modifier
- * classes, please see:
- *
- * https://tailwindcss.com/docs/typography-plugin
- */
-
-/* $(post-content-selector) {
-	@apply prose prose-neutral max-w-none prose-a:text-primary;
+/* NU button */
+/* .btn-nu {
+	@apply inline-block rounded border border-white bg-nu-black px-12 py-3 text-sm font-bold text-white drop-shadow-brut hover:border-black  hover:text-black focus:outline-none focus:ring active:bg-nu-black;
 } */
-
-/* Content width from the `theme.json` file */
-/* .entry-content > * {
-	@apply mx-auto max-w-content;
-} */
+.btn-nu:hover {
+	background: var(--rainbow-color);
+}
+.rainbow-background {
+	background: var(--rainbow-color);
+}
 
 /* Wide width from the `theme.json` file */
 .entry-content > .alignwide {
@@ -64,7 +51,6 @@ $(post-title-selector) {
 .wp-block-columns {
 	@apply max-w-2xl;
 }
-
 .wp-block-columns ul {
 	@apply list-disc;
 }
@@ -80,25 +66,12 @@ $(post-title-selector) {
 .wp-block-gallery {
 	@apply mx-auto;
 }
-
 .wp-block-image {
 	@apply relative h-[14.75rem] w-[23.5rem];
 }
-
 .wp-block-image img {
 	@apply absolute inset-0 h-full w-full object-cover;
 }
 
 @media (max-width: 768px) {
 }
-
-/* white line found in about page */
-/* .wp-container-1 {
-	padding-left: 20px;
-	margin-left: -20px;
-	border-left: 1px solid #ffffff;
-} */
-
-/* .wp-container-2 {
-	@apply absolute left-0;
-} */

@@ -4,6 +4,7 @@
 </section> -->
 
 <?php
+
 $page_title = get_post_meta(get_the_ID(), 'page_title', true);
 $locations_image = get_post_meta(get_the_ID(), 'locations_image', true);
 ?>
@@ -11,7 +12,7 @@ $locations_image = get_post_meta(get_the_ID(), 'locations_image', true);
 <div class="hero min-h-[16rem] md:min-h-[23rem] mb-4 md:mb-[5.125rem] relative" style="background-image: url(<?php echo wp_get_attachment_image_url($locations_image, "full"); ?>);">
     <div class="hero-overlay bg-opacity-80"></div>
     <div class="hero-content text-center text-neutral-content">
-        <div class="max-w-md">
+        <div class="max-w-md text-white">
             <!-- styling for the_title() in components.css , $post-title-selector -->
             <h1 class="font-bold"><?php echo $page_title; ?></h1>
         </div>
@@ -19,8 +20,8 @@ $locations_image = get_post_meta(get_the_ID(), 'locations_image', true);
 </div>
 
 <?php
-get_template_part('template-parts/pages/location-posts');
-get_template_part('template-parts/pages/location-franchising-info');
+get_template_part('template-parts/content/locations/locations-posts');
+get_template_part('template-parts/content/locations/locations-franchising-info');
 ?>
 
 <section id="nearest-location" class="mx-auto text-center mt-10">
